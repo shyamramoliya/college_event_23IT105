@@ -1,0 +1,190 @@
+/* Slightly creative yet simple styles for event management app */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+  padding: 30px 25px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #e0e7ff;
+  margin-bottom: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #4455ff;
+  font-weight: 600;
+  margin-left: 20px;
+  position: relative;
+  padding-bottom: 3px;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #4455ff;
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #282cdd;
+}
+
+nav a:hover::after,
+nav a:focus::after {
+  width: 100%;
+}
+
+h2 {
+  margin-top: 0;
+  text-align: center;
+  color: #4455ff;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 30px;
+}
+
+li {
+  border: 1px solid #dde3ff;
+  border-radius: 10px;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  background: #f9fbff;
+  box-shadow: 1px 1px 5px rgba(102, 166, 255, 0.15);
+  transition: box-shadow 0.2s ease;
+}
+
+li:hover {
+  box-shadow: 2px 4px 12px rgba(102, 166, 255, 0.4);
+}
+
+li strong {
+  font-size: 1.15rem;
+  color: #2233cc;
+}
+
+li small {
+  display: block;
+  color: #6677cc;
+  margin-top: 4px;
+  font-style: italic;
+}
+
+p {
+  color: #555;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 6px;
+  color: #2233cc;
+}
+
+input[type="text"],
+input[type="datetime-local"],
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px 10px;
+  margin-top: 4px;
+  margin-bottom: 14px;
+  border: 2px solid #dde3ff;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="datetime-local"]:focus,
+textarea:focus {
+  border-color: #4455ff;
+  outline: none;
+  background-color: #f0f4ff;
+}
+
+button {
+  width: 100%;
+  padding: 12px 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #4455ff 0%, #6677ff 100%);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(68, 85, 255, 0.4);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #2233cc 0%, #4455ff 100%);
+  box-shadow: 0 8px 20px rgba(34, 51, 204, 0.6);
+}
+
+/* Scrollbar styling for events list */
+ul::-webkit-scrollbar {
+  width: 8px;
+}
+
+ul::-webkit-scrollbar-thumb {
+  background: #4455ff;
+  border-radius: 4px;
+}
+
+ul::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  body {
+    padding: 20px 10px;
+  }
+
+  .container {
+    padding: 20px 15px;
+  }
+
+  nav a {
+    margin-left: 10px;
+  }
+
+  li {
+    padding: 12px 15px;
+  }
+}
